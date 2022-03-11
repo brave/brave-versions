@@ -74,7 +74,6 @@ async function main() {
       published: ghRelease.published_at,
       dependencies: {
         chrome: gitRelease.chrome_version,
-        widevine: gitRelease.widevine_version,
       },
       github: {
         release_id: ghRelease.id,

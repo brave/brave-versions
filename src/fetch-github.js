@@ -91,7 +91,7 @@ export class GithubFetcher {
     const nextUrl = new URL(links.next);
     const lastUrl = new URL(links.last);
     const baseUrl = url.format(nextUrl, { search: false })
-    const pageCount = parseFloat(lastUrl.searchParams.get('page'));
+    const pageCount = Math.min(10, parseFloat(lastUrl.searchParams.get('page')));
     let progress = multibar.create(pageCount - 1, 0, { title: 'gh releases', filename: 'N/A' });
 
     let toFetch = [];

@@ -66,6 +66,8 @@ async function main() {
     }
 
     let gitRelease = gitReleases[tag];
+    let matchedGroups = ghRelease.name.match('(Chromium )\(([0-9\.])+\)')
+    let chromiumVersion = (matchedGroups && matchedGroups.length > 2) ? matchedGroups[2] : gitRelease.chrome_version
     let finalRelease = {
       tag,
       name: tag.substring(1),
@@ -73,7 +75,7 @@ async function main() {
       commit: gitRelease.commit,
       published: ghRelease.published_at,
       dependencies: {
-        chrome: ghRelease.name.match('(Chromium )\(([0-9\.])+\)')[2],
+        chrome: chromiumVersion,
       },
       github: {
         release_id: ghRelease.id,

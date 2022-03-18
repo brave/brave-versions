@@ -73,7 +73,7 @@ async function main() {
       commit: gitRelease.commit,
       published: ghRelease.published_at,
       dependencies: {
-        chrome: gitRelease.chrome_version,
+        chrome: ghRelease.name.match('(Chromium )\(([0-9\.])+\)')[2],
       },
       github: {
         release_id: ghRelease.id,

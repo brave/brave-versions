@@ -13,7 +13,6 @@ a central dataset about Brave versions.
 **Dependencies**
 
 - [nvm](https://github.com/nvm-sh/nvm)
-- [yarn](https://yarnpkg.com/getting-started/install)
 
 **Clone and install dependencies**
 
@@ -22,13 +21,13 @@ git clone https://github.com/marshall/brave-versions
 cd brave-versions
 
 nvm use
-yarn install
+npm install
 ```
 
 **Run brave-versions**
 
 ```bash
-yarn run brave-versions
+npm run brave-versions
 ```
 
 By default generated json is written to `brave-versions.json`

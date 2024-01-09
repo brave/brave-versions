@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build": "babel src -d .build",
-    "brave-versions": "yarn build && node .build/index.js",
+    "brave-versions": "npm build && node .build/index.js",
     "lint": "eslint src"
   },
   "devDependencies": {

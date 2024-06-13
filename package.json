@@ -22,7 +22,7 @@
     "lint": "eslint src"
   },
   "devDependencies": {
-    "@babel/cli": "^7.12.1",
+    "@babel/cli": "^7.24.7",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "babel-plugin-source-map-support": "^2.1.3",

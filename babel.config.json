@@ -9,6 +9,7 @@
     [
       "@babel/preset-env",
       {
+        "modules": "commonjs",
         "targets": {
           "esmodules": true
         }
